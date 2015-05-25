@@ -2,9 +2,8 @@
   "name": "beagle-snes",
   "version": "0.1.0",
   "description": "Additional features for the beagle-snes.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "directories": {
+    "bin": "bin"
   },
   "repository": {
     "type": "git",
