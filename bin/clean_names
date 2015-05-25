@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$1" = "" ] ; then
+	echo "Must supply a directory name to clean names..."
+	exit 1
+fi
+
+rom_path=$1
+
+pushd $rom_path
+	for file in * ; do
+		mv "$file" "$(echo $file | sed 's/ ([0-9A-Za-z\.]*)//g' | sed 's/ \[![A-Za-z]*\]//g' | sed 's/\.\./\./g' | sed 's/  / /g')"
+	done
+popd
+
