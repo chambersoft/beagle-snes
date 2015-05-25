@@ -1,6 +1,6 @@
 {
   "name": "beagle-snes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Additional features for the beagle-snes.",
   "directories": {
     "bin": "bin"
