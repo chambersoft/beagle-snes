@@ -4,6 +4,10 @@ beagle-snes
 This package packages and standardizes ROM names across various platforms to look (and work) nice in beagleSNES.
 
 
+`npm install -g beagle-snes`
+
+
+
 Goals
 -----
 
