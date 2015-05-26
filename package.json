@@ -21,5 +21,11 @@
     "clean_names": "bin/clean_names",
     "roms_to_xml": "bin/roms_to_xml"
   },
-  "author": "Cole Chamberlain <cole.chamberlain@gmail.com> (http://devdis.co)"
+  "author": "Cole Chamberlain <cole.chamberlain@gmail.com> (http://devdis.co)",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "express": "^4.12.4",
+    "minimist": "^1.1.1",
+    "request": "^2.55.0"
+  }
 }

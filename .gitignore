@@ -1,2 +1,4 @@
 roms/
 .idea/*.log
+
+node_modules/
