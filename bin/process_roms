@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ "$1" = "" ] ; then
+	echo "Must supply a directory name to clean names..."
+	exit 1
+fi
+
+SCRIPT_ROOT="$( cd "$(dirname "$0")" ; pwd -P )"
+PROCESS_SCRIPT_PATH="$SCRIPT_ROOT/process_rom"
+
+# Rom directory to process
+# "/path/to/my/roms
+ROM_ROOT=$1
+
+
+
+# Rom directory this will be placed in /roms/snes, etc.
+# "/path/to/dist/rom/dir"
+DIST_PATH=${2-$PWD}
+
+
+pushd "$ROM_ROOT" >/dev/null
+	for rom_raw_file in * ; do
+	    rom_path="$ROM_ROOT/$rom_raw_file"
+	    echo "$("$PROCESS_SCRIPT_PATH" "$rom_path" "$DIST_PATH")"
+	done
+popd >/dev/null

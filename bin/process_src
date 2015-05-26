@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ "$1" = "" ] ; then
+	echo "Must supply a source directory to process..."
+	exit 1
+fi
+
+SCRIPT_ROOT="$( cd "$(dirname "$0")" ; pwd -P )"
+PROCESS_SCRIPT_PATH="$SCRIPT_ROOT/process_roms"
+
+# Rom directory to process
+# "/path/to/my/roms
+SRC_ROOT="$1"
+ROMS_SRC_ROOT="$SRC_ROOT/roms"
+
+# Rom directory this will be placed in /roms/snes, etc.
+# "/path/to/dist/rom/dir"
+DIST_ROOT=${2-"$PWD"}
+ROMS_DIST_ROOT="$DIST_ROOT/roms"
+
+
+pushd "$ROMS_SRC_ROOT" >/dev/null
+	for rom_root in */ ; do # iterates over rom directory names (snes, nes, gba, etc..)
+		rom_src_root="$ROMS_SRC_ROOT/$rom_root"
+		rom_dist_root="$ROMS_DIST_ROOT/$rom_root"
+	    echo "$("$PROCESS_SCRIPT_PATH" "$rom_src_root" "$rom_dist_root")"
+	done
+popd >/dev/null
