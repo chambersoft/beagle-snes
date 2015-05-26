@@ -51,7 +51,7 @@
     </gpio>
 
 
-    {{INJECT_GAMES}}
+{INJECT_GAMES}
 
 </config>
 
