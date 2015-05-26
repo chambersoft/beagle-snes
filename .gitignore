@@ -3,3 +3,5 @@ roms/
 .idea/
 *.log
 node_modules/
+dist_test/
+src/build/
