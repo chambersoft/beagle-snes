@@ -5,6 +5,11 @@ if [ "$1" = "" ] ; then
 	exit 1
 fi
 
+if [ "$2" = "" ] ; then
+	echo "Must supply a destination directory to process..."
+	exit 1
+fi
+
 SCRIPT_ROOT="$(cd "$(dirname "$0")" ; pwd -P )"
 PROCESS_SCRIPT_PATH="$SCRIPT_ROOT/process_roms"
 
@@ -13,23 +18,27 @@ PROCESS_SCRIPT_PATH="$SCRIPT_ROOT/process_roms"
 SRC_ROOT="$(cd "$1";pwd)"
 ROMS_SRC_ROOT="$SRC_ROOT/roms"
 BUILD_SRC_ROOT="$SRC_ROOT/build"
+rimraf "$BUILD_SRC_ROOT"
 mkdir -p "$BUILD_SRC_ROOT"
 GAMES_XML_SRC_PATH="$BUILD_SRC_ROOT/games.xml"
 
 # Rom directory this will be placed in /roms/snes, etc.
 # "/path/to/dist/rom/dir"
-DIST_ROOT="$(cd "${2-"$PWD"}";pwd)"
+mkdir -p "$2"
+DIST_ROOT="$(cd "$2";pwd)"
 ROMS_DIST_ROOT="$DIST_ROOT/roms"
-mkdir -p "$ROMS_DIST_ROOT"
 GAMES_XML_DIST_PATH="$DIST_ROOT/games.xml"
+rimraf "$GAMES_XML_DIST_PATH"
+rimraf "$ROMS_DIST_ROOT"
 
 
 pushd "$ROMS_SRC_ROOT" >/dev/null
 	for rom_root in */ ; do # iterates over rom directory names (snes, nes, gba, etc..)
 		rom_type=$(echo $rom_root | tr -d '/')
 		build_path="$BUILD_SRC_ROOT/$rom_type"
-		rom_src_root="$ROMS_SRC_ROOT/$rom_root"
-		rom_dist_root="$ROMS_DIST_ROOT/$rom_root"
+		rom_src_root="$ROMS_SRC_ROOT/$rom_type"
+		rom_dist_root="$ROMS_DIST_ROOT/$rom_type"
+		mkdir -p "$rom_dist_root"
 		echo "  <$rom_type>" >$build_path
 	    echo "$("$PROCESS_SCRIPT_PATH" "$rom_src_root" "$rom_dist_root")" >>$build_path
 	    echo "  </$rom_type>" >>$build_path
@@ -37,16 +46,12 @@ pushd "$ROMS_SRC_ROOT" >/dev/null
 popd >/dev/null
 
 BUILD_ALL_PATH="$BUILD_SRC_ROOT/all_roms"
-rm "$BUILD_ALL_PATH"
 pushd "$BUILD_SRC_ROOT"
 	for rom_config in */ ; do
-		echo cat "$rom_config" >>"$BUILD_ALL_PATH"
+		cat "$rom_config" >>"$BUILD_ALL_PATH"
 	done
 popd
 
-all_configs="$(echo cat "$BUILD_ALL_PATH")"
-games_xml_src="$(echo cat "$GAMES_XML_SRC_PATH")"
-
-echo "$games_xml_src" | sed 's/{{INJECT_GAMES}}/all_configs/g' >>"$GAMES_XML_DIST_PATH"
-
+#all_configs=cat "$BUILD_ALL_PATH")"
+cat "$GAMES_XML_SRC_PATH" | sed "s/{{INJECT_GAMES}}/$(cat "$BUILD_ALL_PATH")/g" >"$GAMES_XML_DIST_PATH"
 
