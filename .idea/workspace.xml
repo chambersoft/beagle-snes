@@ -43,21 +43,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="process_src" pinned="false" current-in-tab="false">
+          <file leaf-file-name="process_src" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bin/process_src">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="games.xml" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/games.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7461874">
-                  <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+                <state vertical-scroll-proportion="0.7723312">
+                  <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -100,8 +90,8 @@
         <option value="$PROJECT_DIR$/bin/clean_names" />
         <option value="$PROJECT_DIR$/bin/process_rom" />
         <option value="$PROJECT_DIR$/bin/process_roms" />
-        <option value="$PROJECT_DIR$/bin/process_src" />
         <option value="$PROJECT_DIR$/src/games.xml" />
+        <option value="$PROJECT_DIR$/bin/process_src" />
       </list>
     </option>
   </component>
@@ -434,18 +424,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.719697">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/process_roms">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39324617">
           <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.719697">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -458,18 +448,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/process_src">
+    <entry file="file://$PROJECT_DIR$/src/games.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/games.xml">
+    <entry file="file://$PROJECT_DIR$/bin/process_src">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7461874">
-          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.7723312">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>

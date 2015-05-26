@@ -53,6 +53,7 @@ pushd "$BUILD_SRC_ROOT" >/dev/null
 popd >/dev/null
 
 all_configs=$(cat "$BUILD_ALL_PATH")
-replace_string="{INJECT_GAMES}"
-cat "$GAMES_XML_SRC_PATH" | sed "s/$replace_string/$all_configs/g" >"$GAMES_XML_DIST_PATH"
+echo "BUILDING ALL_CONFIGS BELOW WITH $GAMES_XML_SRC_PATH TO $GAMES_XML_DIST_PATH"
+replace_string="<INJECT_GAMES />"
+echo $(cat "$GAMES_XML_SRC_PATH") | sed "s/{INJECT_GAMES}/"$all_configs"/g" >$GAMES_XML_DIST_PATH
 
