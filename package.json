@@ -1,7 +1,7 @@
 {
   "name": "beagle-snes",
   "version": "0.1.2",
-  "description": "Additional features for the beagle-snes.",
+  "description": "Additional features for the beagle-snes",
   "repository": {
     "type": "git",
     "url": "https://github.com/chambersoft/beagle-snes.git"
@@ -21,5 +21,5 @@
     "clean_names": "bin/clean_names",
     "roms_to_xml": "bin/roms_to_xml"
   },
-  "author": "chambersoft <cole.chamberlain@gmail.com> (http://chambersoft.github.io)"
+  "author": "Cole Chamberlain <cole.chamberlain@gmail.com> (http://devdis.co)"
 }
