@@ -53,17 +53,15 @@ rom_dist_title=$(echo $cleaned_rom_title | sed 's/&/\&amp;/g' | sed 's/"/\&quot;
 
 # replace all spaces with underscore, lowercase file names, and strip all punctuation, lowercase file extension
 # "some_great_rom_with_terrible_punctionuation.nes"
-rom_dist_file="$(echo $cleaned_rom_title | tr -d '[:punct:]' | sed 's/^ *//;s/ *$//g' | sed 's/  / /g' | tr '[:upper:]' '[:lower:]' | tr ' ' '_').$(echo $rom_raw_ext | tr '[:upper:]' '[:lower:]')"
+rom_dist_file=$(echo $cleaned_rom_title | tr -d '[:punct:]' | sed 's/^ *//;s/ *$//g' | sed 's/  / /g' | tr '[:upper:]' '[:lower:]' | tr ' ' '_').$(echo $rom_raw_ext | tr '[:upper:]' '[:lower:]')
 
 # where the cleaned up rom is going
 # "/path/to/dist/rom/dir/some_great_rom_with_terrible_punctionuation.nes"
 rom_dist_path="$dist_path/$rom_dist_file"
 
+cp "$rom_path" "$rom_dist_path"
 
-# TODO: Move to the specified path
-#cp "$rom_path" "$dist_path/$new_file"
-
-echo "  <game>"
-echo "    <title>$rom_dist_title</title>"
-echo "    <rom>$rom_dist_file</rom>"
-echo "  </game>"
+echo "    <game>"
+echo "      <title>$rom_dist_title</title>"
+echo "      <rom>$rom_dist_file</rom>"
+echo "    </game>"

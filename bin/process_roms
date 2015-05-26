@@ -9,10 +9,8 @@ SCRIPT_ROOT="$( cd "$(dirname "$0")" ; pwd -P )"
 PROCESS_SCRIPT_PATH="$SCRIPT_ROOT/process_rom"
 
 # Rom directory to process
-# "/path/to/my/roms
+# "/path/to/my/roms"
 ROM_ROOT=$1
-
-
 
 # Rom directory this will be placed in /roms/snes, etc.
 # "/path/to/dist/rom/dir"

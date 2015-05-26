@@ -27,7 +27,7 @@
             <entry file="file://$PROJECT_DIR$/bin/process_rom">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -43,31 +43,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="clean_names" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/clean_names">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="process_src" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bin/process_src">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.50965667">
-                  <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+                <state vertical-scroll-proportion="0.59227467">
+                  <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="roms_to_xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/roms_to_xml">
+          <file leaf-file-name="games.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/games.xml">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                  <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -80,8 +70,8 @@
           <file leaf-file-name="process_roms" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bin/process_roms">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.34656653">
-                  <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+                <state vertical-scroll-proportion="0.32618025">
+                  <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -108,9 +98,10 @@
         <option value="$PROJECT_DIR$/bin/clean_rom_name" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bin/clean_names" />
+        <option value="$PROJECT_DIR$/src/games.xml" />
         <option value="$PROJECT_DIR$/bin/process_rom" />
-        <option value="$PROJECT_DIR$/bin/process_src" />
         <option value="$PROJECT_DIR$/bin/process_roms" />
+        <option value="$PROJECT_DIR$/bin/process_src" />
       </list>
     </option>
   </component>
@@ -181,10 +172,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="roms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -203,8 +190,18 @@
               <option name="myItemId" value="roms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nes" />
+              <option name="myItemId" value="beagleSNES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beagle-snes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,6 +232,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cchamberlain\chambersoft\beagle-snes\src" />
       <recent name="C:\Users\cchamberlain\chambersoft\beagle-snes\bin" />
       <recent name="$PROJECT_DIR$/dist" />
     </key>
@@ -435,6 +433,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/process_roms">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32618025">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.719697">
@@ -443,42 +449,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/roms_to_xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/clean_names">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/process_rom">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/games.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/process_src">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50965667">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/process_roms">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34656653">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.59227467">
+          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
           <folding />
         </state>
       </provider>
