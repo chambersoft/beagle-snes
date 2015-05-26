@@ -13,13 +13,14 @@ PROCESS_SCRIPT_PATH="$SCRIPT_ROOT/process_roms"
 SRC_ROOT="$(cd "$1";pwd)"
 ROMS_SRC_ROOT="$SRC_ROOT/roms"
 BUILD_SRC_ROOT="$SRC_ROOT/build"
-mkdir -p $BUILD_SRC_ROOT
+mkdir -p "$BUILD_SRC_ROOT"
 GAMES_XML_SRC_PATH="$BUILD_SRC_ROOT/games.xml"
 
 # Rom directory this will be placed in /roms/snes, etc.
 # "/path/to/dist/rom/dir"
 DIST_ROOT="$(cd "${2-"$PWD"}";pwd)"
 ROMS_DIST_ROOT="$DIST_ROOT/roms"
+mkdir -p "$ROMS_DIST_ROOT"
 GAMES_XML_DIST_PATH="$DIST_ROOT/games.xml"
 
 
