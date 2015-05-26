@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ "$1" = "" ] ; then
+	echo "Must supply a file name to clean..."
+	exit 1
+fi
+
+# Rom to process
+rom_path=$1
+dist_path=$2
+
+
+rom_dir_name=$(dirname $rom_path)
+rom_raw_name=$(basename $rom_path)
+rom_raw_ext="${rom_raw_name##*.}"
+
+pushd $rom_dir_name
+
+new_name=$(echo $rom_raw_name | sed 's/ ([0-9A-Za-z\.]*)//g' | sed 's/ \[![A-Za-z]*\]//g' | sed 's/\.\./\./g' | sed 's/  / /g')
+
+cp "$file_name" "$dist_path/$new_file"
+
+popd

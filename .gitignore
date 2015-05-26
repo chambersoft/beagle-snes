@@ -1,4 +1,5 @@
+!src/roms/
 roms/
-.idea/*.log
-
+.idea/
+*.log
 node_modules/
