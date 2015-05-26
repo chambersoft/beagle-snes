@@ -1,6 +1,6 @@
 {
   "name": "beagle-snes",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Additional features for the beagle-snes",
   "repository": {
     "type": "git",
