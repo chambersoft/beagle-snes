@@ -5,6 +5,7 @@ if [ "$1" = "" ] ; then
 	exit 1
 fi
 
+
 rom_path=$1
 
 pushd $rom_path

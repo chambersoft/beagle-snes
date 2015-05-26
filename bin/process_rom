@@ -1,23 +1,69 @@
 #!/bin/bash
 
+# This file will build dist based off input, and a game xml node to stdout (meant to be run from something else to compile games)
+
 if [ "$1" = "" ] ; then
 	echo "Must supply a file name to clean..."
 	exit 1
 fi
 
+API_KEY="0a491d64573e19f94a48b336ca1619c6967e45ea"
+API_SEARCH="http://www.giantbomb.com/api/search?api_key=[API_KEY]&format=JSONquery=\"[QUERY]\"&resources=game"
+
+
 # Rom to process
+# "/path/to/my/Some Great &ROM with Terrible punction'uation (UJ.) [!p].nes"
 rom_path=$1
-dist_path=$2
+
+# Rom directory this will be placed in /roms/snes, etc.
+# "/path/to/dist/rom/dir"
+dist_path=${2-$PWD}
+
+1>&2 echo "process_rom $rom_path, $dist_path"
 
 
-rom_dir_name=$(dirname $rom_path)
-rom_raw_name=$(basename $rom_path)
-rom_raw_ext="${rom_raw_name##*.}"
+# "/path/to/my"
+rom_dir=$(dirname $rom_path)
+# "Some Great &ROM with Terrible punction'uation (UJ.) [!p].nes"
+rom_raw_file=$(basename $rom_path)
+# "nes"
+rom_raw_ext="${rom_raw_file##*.}"
+# "Some Great &ROM with Terrible punction'uation (UJ.) [!p]"
+rom_raw_title="${rom_raw_file%.*}"
 
-pushd $rom_dir_name
 
-new_name=$(echo $rom_raw_name | sed 's/ ([0-9A-Za-z\.]*)//g' | sed 's/ \[![A-Za-z]*\]//g' | sed 's/\.\./\./g' | sed 's/  / /g')
+# stripped (ALPHANUMERIC.) [!ALPHA], no double dots, no double spaces, and trim whitespace
+# "Some Great &ROM with Terrible punction'uation"
+cleaned_rom_title=$(echo $rom_raw_title | sed 's/ ([0-9A-Za-z\.]*)//g' | sed 's/ \[![A-Za-z]*\]//g' | sed 's/\.\./\./g' | sed 's/  / /g' | sed 's/^ *//;s/ *$//g')
 
-cp "$file_name" "$dist_path/$new_file"
 
-popd
+# strip out punctionation for api search
+# "Some Great ROM with Terrible punctionuation"
+search_string="$(echo $cleaned_rom_title | tr -d '[:punct:]')"
+
+# replace search with api key and query
+search_url="$(echo $API_SEARCH | sed "s/\[API_KEY\]/$API_KEY/g" | sed "s/\[QUERY\]/$search_string/g")"
+
+# TODO: Search and get rom image, genre, details
+
+
+# replaced all invalid xml [&,",',<,>] chars with their escaped versions
+# "Some Great &amp;ROM with Terrible punction&apos&uation"
+rom_dist_title=$(echo $cleaned_rom_title | sed 's/&/&amp;/g' | sed 's/"/&quot;/g' | sed 's/\'/&apos;/g' | sed 's/</&lt;/g' | sed 's/>/&gt;/g')
+
+# replace all spaces with underscore, lowercase file names, and strip all punctuation, lowercase file extension
+# "some_great_rom_with_terrible_punctionuation.nes"
+rom_dist_file="$(echo $cleaned_rom_title | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '_').$(echo $rom_raw_ext | tr '[:upper:]' '[:lower:]')"
+
+# where the cleaned up rom is going
+# "/path/to/dist/rom/dir/some_great_rom_with_terrible_punctionuation.nes"
+rom_dist_path="$dist_path/$rom_dist_file"
+
+
+# TODO: Move to the specified path
+#cp "$rom_path" "$dist_path/$new_file"
+
+echo "  <game>"
+echo "    <title>$rom_dist_title</title>"
+echo "    <rom>$rom_dist_file</rom>"
+echo "  </game>"
