@@ -1,675 +1,967 @@
 <?xml version="1.0"?>
 <config>
 
-    <player1>
-        <vaxis>1</vaxis>
-        <haxis>0</haxis>
-        <L>4</L>
-        <R>5</R>
-        <A>1</A>
-        <B>2</B>
-        <X>0</X>
-        <Y>3</Y>
-        <select>8</select>
-        <start>9</start>
-    </player1>
+  <player1>
+    <vaxis>1</vaxis>
+    <haxis>0</haxis>
+    <L>4</L>
+    <R>5</R>
+    <A>1</A>
+    <B>2</B>
+    <X>0</X>
+    <Y>3</Y>
+    <select>8</select>
+    <start>9</start>
+  </player1>
 
-    <player2>
-        <vaxis>1</vaxis>
-        <haxis>0</haxis>
-        <L>4</L>
-        <R>5</R>
-        <A>1</A>
-        <B>2</B>
-        <X>0</X>
-        <Y>3</Y>
-        <select>8</select>
-        <start>9</start>
-    </player2>
 
-    <pause_combo>
-        <pause_key>4</pause_key>
-        <pause_key>5</pause_key>
-        <pause_key>8</pause_key>
-        <pause_key>9</pause_key>
-    </pause_combo>
+  <player2>
+    <vaxis>1</vaxis>
+    <haxis>0</haxis>
+    <L>4</L>
+    <R>5</R>
+    <A>1</A>
+    <B>2</B>
+    <X>0</X>
+    <Y>3</Y>
+    <select>8</select>
+    <start>9</start>
+  </player2>
 
-    <gpio>
-        <gpio_gpleft>66</gpio_gpleft>
-        <gpio_gpright>67</gpio_gpright>
-        <gpio_gpup>69</gpio_gpup>
-        <gpio_gpdown>68</gpio_gpdown>
-        <gpio_L>45</gpio_L>
-        <gpio_R>44</gpio_R>
-        <gpio_A>23</gpio_A>
-        <gpio_B>26</gpio_B>
-        <gpio_X>47</gpio_X>
-        <gpio_Y>46</gpio_Y>
-        <gpio_select>27</gpio_select>
-        <gpio_start>65</gpio_start>
-        <gpio_pause>22</gpio_pause>
-    </gpio>
+
+  <pause_combo>
+    <pause_key>4</pause_key>
+    <pause_key>5</pause_key>
+    <pause_key>8</pause_key>
+    <pause_key>9</pause_key>
+  </pause_combo>
+
+
+  <gpio>
+    <gpio_gpleft>66</gpio_gpleft>
+    <gpio_gpright>67</gpio_gpright>
+    <gpio_gpup>69</gpio_gpup>
+    <gpio_gpdown>68</gpio_gpdown>
+    <gpio_L>45</gpio_L>
+    <gpio_R>44</gpio_R>
+    <gpio_A>23</gpio_A>
+    <gpio_B>26</gpio_B>
+    <gpio_X>47</gpio_X>
+    <gpio_Y>46</gpio_Y>
+    <gpio_select>27</gpio_select>
+    <gpio_start>65</gpio_start>
+    <gpio_pause>22</gpio_pause>
+  </gpio>
+
   <nes>
     <game>
       <title>Baseball Stars</title>
       <rom>baseball_stars.nes</rom>
+      <image>baseball_stars.jpg</image>
+      <year>1989</year>
     </game>
     <game>
       <title>Bionic Commando</title>
       <rom>bionic_commando.nes</rom>
+      <image>bionic_commando.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Blaster Master</title>
       <rom>blaster_master.nes</rom>
+      <image>blaster_master.jpg</image>
+      <year>1988</year>
     </game>
     <game>
       <title>Bomberman</title>
       <rom>bomberman.nes</rom>
+      <image>bomberman.png</image>
+      <year>2005</year>
     </game>
     <game>
       <title>Bubble Bobble</title>
       <rom>bubble_bobble.nes</rom>
+      <image>bubble_bobble.jpg</image>
+      <year>1986</year>
     </game>
     <game>
       <title>Castlevania II - Simon&apos;s Quest</title>
       <rom>castlevania_ii_simons_quest.nes</rom>
+      <image>castlevania_ii_simons_quest.jpg</image>
+      <year>1987</year>
     </game>
     <game>
       <title>Castlevania III - Dracula&apos;s Curse</title>
       <rom>castlevania_iii_draculas_curse.nes</rom>
+      <image>castlevania_iii_draculas_curse.jpg</image>
+      <year>1990</year>
     </game>
     <game>
       <title>Castlevania</title>
       <rom>castlevania.nes</rom>
+      <image>castlevania.jpg</image>
     </game>
     <game>
       <title>Chip &apos;n Dale Rescue Rangers 2</title>
       <rom>chip_n_dale_rescue_rangers_2.nes</rom>
+      <image>chip_n_dale_rescue_rangers_2.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Chip &apos;n Dale Rescue Rangers</title>
       <rom>chip_n_dale_rescue_rangers.nes</rom>
+      <image>chip_n_dale_rescue_rangers.jpg</image>
+      <year>1990</year>
     </game>
     <game>
       <title>Cobra Triangle</title>
       <rom>cobra_triangle.nes</rom>
+      <image>cobra_triangle.jpg</image>
+      <year>1989</year>
     </game>
     <game>
       <title>Contra</title>
       <rom>contra.nes</rom>
+      <image>contra.jpg</image>
+      <year>1987</year>
     </game>
     <game>
       <title>Dr. Mario</title>
       <rom>dr_mario.nes</rom>
+      <image>dr_mario.png</image>
+      <year>1990</year>
     </game>
     <game>
       <title>Dragon Warrior II</title>
       <rom>dragon_warrior_ii.nes</rom>
+      <image>dragon_warrior_ii.jpg</image>
+      <year>1987</year>
     </game>
     <game>
       <title>Dragon Warrior</title>
       <rom>dragon_warrior.nes</rom>
+      <image>dragon_warrior.jpg</image>
+      <year>1986</year>
     </game>
     <game>
-      <title>Duck Hunt</title>
+      <title>Duck HuntI</title>
       <rom>duck_hunt.nes</rom>
     </game>
     <game>
       <title>Duck Tales</title>
       <rom>duck_tales.nes</rom>
+      <image>duck_tales.jpg</image>
+      <year>1989</year>
     </game>
     <game>
       <title>Excitebike</title>
       <rom>excitebike.nes</rom>
+      <image>excitebike.jpg</image>
+      <year>1984</year>
     </game>
     <game>
       <title>Final Fantasy</title>
       <rom>final_fantasy.nes</rom>
+      <image>final_fantasy.jpg</image>
+      <year>1987</year>
     </game>
     <game>
       <title>Gradius II</title>
       <rom>gradius_ii.nes</rom>
+      <image>gradius_ii.jpg</image>
+      <year>1988</year>
     </game>
     <game>
       <title>Gradius</title>
       <rom>gradius.nes</rom>
+      <image>gradius.jpg</image>
+      <year>1985</year>
     </game>
     <game>
-      <title>Ice Hockey</title>
+      <title>Ice HockeyI</title>
       <rom>ice_hockey.nes</rom>
     </game>
     <game>
       <title>Kid Icarus</title>
       <rom>kid_icarus.nes</rom>
+      <image>kid_icarus.jpg</image>
+      <year>1986</year>
     </game>
     <game>
       <title>Kirby&apos;s Adventure</title>
       <rom>kirbys_adventure.nes</rom>
+      <image>kirbys_adventure.png</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Legend of Zelda, The</title>
       <rom>legend_of_zelda_the.nes</rom>
+      <image>legend_of_zelda_the.png</image>
+      <year>1986</year>
     </game>
     <game>
       <title>Little Nemo - The Dream Master</title>
       <rom>little_nemo_the_dream_master.nes</rom>
+      <image>little_nemo_the_dream_master.jpg</image>
+      <year>1990</year>
     </game>
     <game>
       <title>Mega Man III</title>
       <rom>mega_man_iii.nes</rom>
+      <image>mega_man_iii.png</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Mega Man</title>
       <rom>mega_man.nes</rom>
+      <image>mega_man.png</image>
+      <year>1995</year>
     </game>
     <game>
-      <title>Megaman II</title>
+      <title></title>
       <rom>megaman_ii.nes</rom>
     </game>
     <game>
-      <title>Megaman IV</title>
+      <title></title>
       <rom>megaman_iv.nes</rom>
     </game>
     <game>
-      <title>Megaman V</title>
+      <title></title>
       <rom>megaman_v.nes</rom>
     </game>
     <game>
-      <title>Megaman VI</title>
+      <title></title>
       <rom>megaman_vi.nes</rom>
     </game>
     <game>
       <title>Metal Gear</title>
       <rom>metal_gear.nes</rom>
+      <image>metal_gear.png</image>
+      <year>1987</year>
     </game>
     <game>
       <title>Metal Storm</title>
       <rom>metal_storm.nes</rom>
+      <image>metal_storm.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Metroid</title>
       <rom>metroid.nes</rom>
+      <image>metroid.jpg</image>
+      <year>1986</year>
     </game>
     <game>
       <title>Mike Tyson&apos;s Punch-Out!!</title>
       <rom>mike_tysons_punchout.nes</rom>
+      <image>mike_tysons_punchout.jpg</image>
+      <year>1986</year>
     </game>
     <game>
       <title>Ninja Gaiden II - The Dark Sword of Chaos</title>
       <rom>ninja_gaiden_ii_the_dark_sword_of_chaos.nes</rom>
+      <image>ninja_gaiden_ii_the_dark_sword_of_chaos.jpg</image>
+      <year>1990</year>
     </game>
     <game>
       <title>Ninja Gaiden</title>
       <rom>ninja_gaiden.nes</rom>
+      <image>ninja_gaiden.png</image>
+      <year>2004</year>
     </game>
     <game>
       <title>Paperboy 2</title>
       <rom>paperboy_2.nes</rom>
+      <image>paperboy_2.jpg</image>
+      <year>1988</year>
     </game>
     <game>
       <title>Paperboy</title>
       <rom>paperboy.nes</rom>
+      <image>paperboy.jpg</image>
+      <year>1984</year>
     </game>
     <game>
       <title>Punch-Out!!</title>
       <rom>punchout.nes</rom>
+      <image>punchout.jpg</image>
+      <year>2009</year>
     </game>
     <game>
       <title>R.C. Pro-Am</title>
       <rom>rc_proam.nes</rom>
+      <image>rc_proam.jpg</image>
+      <year>1988</year>
     </game>
     <game>
       <title>River City Ransom</title>
       <rom>river_city_ransom.nes</rom>
+      <image>river_city_ransom.jpg</image>
+      <year>1989</year>
     </game>
     <game>
       <title>Super C</title>
       <rom>super_c.nes</rom>
+      <image>super_c.jpg</image>
+      <year>1990</year>
     </game>
     <game>
       <title>Super Mario Bros. 2</title>
       <rom>super_mario_bros_2.nes</rom>
+      <image>super_mario_bros_2.jpg</image>
+      <year>1988</year>
     </game>
     <game>
       <title>Super Mario Bros. 3</title>
       <rom>super_mario_bros_3.nes</rom>
+      <image>super_mario_bros_3.jpg</image>
+      <year>1988</year>
     </game>
     <game>
       <title>Super Mario Bros</title>
       <rom>super_mario_bros.nes</rom>
+      <image>super_mario_bros.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Teenage Mutant Ninja Turtles II - The Arcade Game</title>
       <rom>teenage_mutant_ninja_turtles_ii_the_arcade_game.nes</rom>
+      <image>teenage_mutant_ninja_turtles_ii_the_arcade_game.jpg</image>
+      <year>1989</year>
     </game>
     <game>
       <title>Teenage Mutant Ninja Turtles III - The Manhattan Project</title>
       <rom>teenage_mutant_ninja_turtles_iii_the_manhattan_project.nes</rom>
+      <image>teenage_mutant_ninja_turtles_iii_the_manhattan_project.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Teenage Mutant Ninja Turtles</title>
       <rom>teenage_mutant_ninja_turtles.nes</rom>
+      <image>teenage_mutant_ninja_turtles.png</image>
+      <year>2003</year>
     </game>
     <game>
       <title>Tetris 2</title>
       <rom>tetris_2.nes</rom>
+      <image>tetris_2.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Tetris</title>
       <rom>tetris.nes</rom>
+      <image>tetris.jpg</image>
+      <year>1984</year>
     </game>
     <game>
       <title>Zelda II - The Adventure of Link</title>
       <rom>zelda_ii_the_adventure_of_link.nes</rom>
+      <image>zelda_ii_the_adventure_of_link.jpg</image>
+      <year>1987</year>
     </game>
   </nes>
   <snes>
     <game>
       <title>ActRaiser</title>
       <rom>actraiser.smc</rom>
+      <image>actraiser.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Adventures of Batman &amp; Robin, The</title>
       <rom>adventures_of_batman_robin_the.smc</rom>
+      <image>adventures_of_batman_robin_the.png</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Aladdin</title>
       <rom>aladdin.smc</rom>
+      <image>aladdin.jpg</image>
+      <year>1975</year>
     </game>
     <game>
       <title>Alien 3</title>
       <rom>alien_3.smc</rom>
+      <image>alien_3.png</image>
     </game>
     <game>
       <title>Axelay</title>
       <rom>axelay.smc</rom>
+      <image>axelay.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Blackthorne</title>
       <rom>blackthorne.smc</rom>
+      <image>blackthorne.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Breath of Fire II</title>
       <rom>breath_of_fire_ii.smc</rom>
+      <image>breath_of_fire_ii.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Breath of Fire</title>
       <rom>breath_of_fire.smc</rom>
+      <image>breath_of_fire.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Bust-A-Move</title>
       <rom>bustamove.smc</rom>
+      <image>bustamove.jpg</image>
+      <year>2009</year>
     </game>
     <game>
       <title>Chrono Trigger</title>
       <rom>chrono_trigger.smc</rom>
+      <image>chrono_trigger.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Contra III - The Alien Wars</title>
       <rom>contra_iii_the_alien_wars.smc</rom>
+      <image>contra_iii_the_alien_wars.png</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Death and Return of Superman, The</title>
       <rom>death_and_return_of_superman_the.smc</rom>
+      <image>death_and_return_of_superman_the.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Demon&apos;s Crest</title>
       <rom>demons_crest.smc</rom>
+      <image>demons_crest.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Donkey Kong Country 2 - Diddy&apos;s Kong Quest</title>
       <rom>donkey_kong_country_2_diddys_kong_quest.smc</rom>
+      <image>donkey_kong_country_2_diddys_kong_quest.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Donkey Kong Country 3 - Dixie Kong&apos;s Double Trouble</title>
       <rom>donkey_kong_country_3_dixie_kongs_double_trouble.smc</rom>
+      <image>donkey_kong_country_3_dixie_kongs_double_trouble.jpg</image>
+      <year>1996</year>
     </game>
     <game>
       <title>Donkey Kong Country</title>
       <rom>donkey_kong_country.smc</rom>
+      <image>donkey_kong_country.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>E.V.O. Search for Eden</title>
       <rom>evo_search_for_eden.smc</rom>
+      <image>evo_search_for_eden.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Earthbound</title>
       <rom>earthbound.smc</rom>
+      <image>earthbound.jpg</image>
     </game>
     <game>
       <title>Earthworm Jim 2</title>
       <rom>earthworm_jim_2.smc</rom>
+      <image>earthworm_jim_2.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Earthworm Jim</title>
       <rom>earthworm_jim.smc</rom>
+      <image>earthworm_jim.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>F-ZERO</title>
       <rom>fzero.smc</rom>
+      <image>fzero.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Fatal Fury 2</title>
       <rom>fatal_fury_2.smc</rom>
+      <image>fatal_fury_2.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Final Fantasy 6</title>
       <rom>final_fantasy_6.smc</rom>
+      <image>final_fantasy_6.png</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Final Fantasy II</title>
       <rom>final_fantasy_ii.smc</rom>
+      <image>final_fantasy_ii.jpg</image>
+      <year>1988</year>
     </game>
     <game>
       <title>Final Fantasy III</title>
       <rom>final_fantasy_iii.smc</rom>
+      <image>final_fantasy_iii.jpg</image>
+      <year>2006</year>
     </game>
     <game>
       <title>Final Fight Guy</title>
       <rom>final_fight_guy.smc</rom>
+      <image>final_fight_guy.jpg</image>
+      <year>1989</year>
     </game>
     <game>
       <title>Flashback - The Quest for Identity</title>
       <rom>flashback_the_quest_for_identity.smc</rom>
+      <image>flashback_the_quest_for_identity.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Gradius III</title>
       <rom>gradius_iii.smc</rom>
+      <image>gradius_iii.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Harvest Moon</title>
       <rom>harvest_moon.smc</rom>
+      <image>harvest_moon.jpg</image>
+      <year>1996</year>
     </game>
     <game>
       <title>Illusion of Gaia</title>
       <rom>illusion_of_gaia.smc</rom>
+      <image>illusion_of_gaia.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>International Superstar Soccer</title>
       <rom>international_superstar_soccer.smc</rom>
+      <image>international_superstar_soccer.jpg</image>
+      <year>2001</year>
     </game>
     <game>
       <title>Joe &amp; Mac 2 - Lost in the Tropics</title>
       <rom>joe_mac_2_lost_in_the_tropics.smc</rom>
+      <image>joe_mac_2_lost_in_the_tropics.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Jungle Strike</title>
       <rom>jungle_strike.smc</rom>
+      <image>jungle_strike.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Ken Griffey Jr.&apos;s Winning Run</title>
       <rom>ken_griffey_jrs_winning_run.smc</rom>
+      <image>ken_griffey_jrs_winning_run.jpg</image>
+      <year>1996</year>
     </game>
     <game>
       <title>Killer Instinct</title>
       <rom>killer_instinct.smc</rom>
+      <image>killer_instinct.png</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Kirby Super Star</title>
       <rom>kirby_super_star.smc</rom>
+      <image>kirby_super_star.jpg</image>
+      <year>2008</year>
     </game>
     <game>
       <title>Kirby&apos;s Avalanche</title>
       <rom>kirbys_avalanche.smc</rom>
+      <image>kirbys_avalanche.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Kirby&apos;s Dream Course</title>
       <rom>kirbys_dream_course.smc</rom>
+      <image>kirbys_dream_course.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Kirby&apos;s Dream Land 3</title>
       <rom>kirbys_dream_land_3.smc</rom>
+      <image>kirbys_dream_land_3.jpg</image>
+      <year>1998</year>
     </game>
     <game>
       <title>Legend of The Mystical Ninja, The</title>
       <rom>legend_of_the_mystical_ninja_the.smc</rom>
+      <image>legend_of_the_mystical_ninja_the.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Legend of Zelda, The - A Link to the Past</title>
       <rom>legend_of_zelda_the_a_link_to_the_past.smc</rom>
+      <image>legend_of_zelda_the_a_link_to_the_past.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Lion King, The</title>
       <rom>lion_king_the.smc</rom>
+      <image>lion_king_the.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Lost Vikings, The</title>
       <rom>lost_vikings_the.smc</rom>
+      <image>lost_vikings_the.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Lufia II - Rise of the Sinistrals</title>
       <rom>lufia_ii_rise_of_the_sinistrals.smc</rom>
+      <image>lufia_ii_rise_of_the_sinistrals.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Madden NFL &apos;94</title>
       <rom>madden_nfl_94.smc</rom>
+      <image>madden_nfl_94.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Magical Quest Starring Mickey Mouse, The</title>
       <rom>magical_quest_starring_mickey_mouse_the.smc</rom>
+      <image>magical_quest_starring_mickey_mouse_the.png</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Mario Paint</title>
       <rom>mario_paint.smc</rom>
+      <image>mario_paint.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Mega Man X 2</title>
       <rom>mega_man_x_2.smc</rom>
+      <image>mega_man_x_2.png</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Mega Man X 3</title>
       <rom>mega_man_x_3.smc</rom>
+      <image>mega_man_x_3.png</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Mega Man X</title>
       <rom>mega_man_x.smc</rom>
+      <image>mega_man_x.png</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Metal Warriors</title>
       <rom>metal_warriors.smc</rom>
+      <image>metal_warriors.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Mortal Kombat II</title>
       <rom>mortal_kombat_ii.smc</rom>
+      <image>mortal_kombat_ii.jpg</image>
+      <year>1997</year>
     </game>
     <game>
       <title>NBA Jam</title>
       <rom>nba_jam.smc</rom>
+      <image>nba_jam.png</image>
+      <year>2003</year>
     </game>
     <game>
       <title>NHL &apos;94</title>
       <rom>nhl_94.smc</rom>
+      <image>nhl_94.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Ogre Battle - The March of the Black Queen</title>
       <rom>ogre_battle_the_march_of_the_black_queen.smc</rom>
+      <image>ogre_battle_the_march_of_the_black_queen.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Out of This World</title>
       <rom>out_of_this_world.smc</rom>
+      <image>out_of_this_world.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Pilotwings</title>
       <rom>pilotwings.smc</rom>
+      <image>pilotwings.jpg</image>
+      <year>1990</year>
     </game>
     <game>
       <title>Pocky &amp; Rocky 2</title>
       <rom>pocky_rocky_2.smc</rom>
+      <image>pocky_rocky_2.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Populous</title>
       <rom>populous.smc</rom>
+      <image>populous.png</image>
+      <year>1989</year>
     </game>
     <game>
       <title>R-Type III - The Third Lightning</title>
       <rom>rtype_iii_the_third_lightning.smc</rom>
+      <image>rtype_iii_the_third_lightning.png</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Rock N&apos; Roll Racing</title>
       <rom>rock_n_roll_racing.smc</rom>
+      <image>rock_n_roll_racing.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Secret of Mana</title>
       <rom>secret_of_mana.smc</rom>
+      <image>secret_of_mana.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Shadowrun</title>
       <rom>shadowrun.smc</rom>
+      <image>shadowrun.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Sim City</title>
       <rom>sim_city.smc</rom>
+      <image>sim_city.jpg</image>
+      <year>1989</year>
     </game>
     <game>
       <title>Soul Blazer</title>
       <rom>soul_blazer.smc</rom>
+      <image>soul_blazer.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Sparkster</title>
       <rom>sparkster.smc</rom>
+      <image>sparkster.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Spider-Man &amp; Venom - Maximum Carnage</title>
       <rom>spiderman_venom_maximum_carnage.smc</rom>
+      <image>spiderman_venom_maximum_carnage.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Star Fox</title>
       <rom>star_fox.smc</rom>
+      <image>star_fox.jpg</image>
+      <year>1983</year>
     </game>
     <game>
       <title>Street Fighter Alpha 2</title>
       <rom>street_fighter_alpha_2.smc</rom>
+      <image>street_fighter_alpha_2.png</image>
+      <year>1996</year>
     </game>
     <game>
-      <title>Street Fighter II Turbo - Hyper Fighting</title>
+      <title>Street Fighter II Turbo - Hyper FightingI</title>
       <rom>street_fighter_ii_turbo_hyper_fighting.smc</rom>
     </game>
     <game>
       <title>Stunt Race FX</title>
       <rom>stunt_race_fx.smc</rom>
+      <image>stunt_race_fx.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Sunset Riders</title>
       <rom>sunset_riders.smc</rom>
+      <image>sunset_riders.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Super Bomberman 2</title>
       <rom>super_bomberman_2.smc</rom>
+      <image>super_bomberman_2.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Super Bomberman</title>
       <rom>super_bomberman.smc</rom>
+      <image>super_bomberman.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Super Castlevania IV</title>
       <rom>super_castlevania_iv.smc</rom>
+      <image>super_castlevania_iv.png</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Super Double Dragon</title>
       <rom>super_double_dragon.smc</rom>
+      <image>super_double_dragon.png</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Super Ghouls &apos;N Ghosts</title>
       <rom>super_ghouls_n_ghosts.smc</rom>
+      <image>super_ghouls_n_ghosts.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Super Mario All-Stars</title>
       <rom>super_mario_allstars.smc</rom>
+      <image>super_mario_allstars.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Super Mario Kart</title>
       <rom>super_mario_kart.smc</rom>
+      <image>super_mario_kart.png</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Super Mario RPG - Legend of the Seven Stars</title>
       <rom>super_mario_rpg_legend_of_the_seven_stars.smc</rom>
+      <image>super_mario_rpg_legend_of_the_seven_stars.jpg</image>
+      <year>1996</year>
     </game>
     <game>
       <title>Super Mario World 2 - Yoshi&apos;s Island</title>
       <rom>super_mario_world_2_yoshis_island.smc</rom>
+      <image>super_mario_world_2_yoshis_island.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Super Mario World</title>
       <rom>super_mario_world.smc</rom>
+      <image>super_mario_world.jpg</image>
+      <year>1990</year>
     </game>
     <game>
       <title>Super Metroid</title>
       <rom>super_metroid.smc</rom>
+      <image>super_metroid.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Super Punch-Out!!</title>
       <rom>super_punchout.smc</rom>
+      <image>super_punchout.png</image>
+      <year>1984</year>
     </game>
     <game>
       <title>Super Star Wars - Return of the Jedi</title>
       <rom>super_star_wars_return_of_the_jedi.smc</rom>
+      <image>super_star_wars_return_of_the_jedi.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Super Star Wars - The Empire Strikes Back</title>
       <rom>super_star_wars_the_empire_strikes_back.smc</rom>
+      <image>super_star_wars_the_empire_strikes_back.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>Super Star Wars</title>
       <rom>super_star_wars.smc</rom>
+      <image>super_star_wars.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Super Tennis</title>
       <rom>super_tennis.smc</rom>
+      <image>super_tennis.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Super Turrican 2</title>
       <rom>super_turrican_2.smc</rom>
+      <image>super_turrican_2.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Teenage Mutant Ninja Turtles IV - Turtles in Time</title>
       <rom>teenage_mutant_ninja_turtles_iv_turtles_in_time.smc</rom>
+      <image>teenage_mutant_ninja_turtles_iv_turtles_in_time.jpg</image>
+      <year>1991</year>
     </game>
     <game>
       <title>Tetris &amp; Dr. Mario</title>
       <rom>tetris_dr_mario.smc</rom>
+      <image>tetris_dr_mario.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Tetris Attack</title>
       <rom>tetris_attack.smc</rom>
+      <image>tetris_attack.jpg</image>
+      <year>1996</year>
     </game>
     <game>
       <title>Tiny Toon Adventures - Buster Busts Loose!</title>
       <rom>tiny_toon_adventures_buster_busts_loose.smc</rom>
+      <image>tiny_toon_adventures_buster_busts_loose.jpg</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Top Gear 2</title>
       <rom>top_gear_2.smc</rom>
+      <image>top_gear_2.jpg</image>
+      <year>1993</year>
     </game>
     <game>
       <title>U.N. Squadron</title>
       <rom>un_squadron.smc</rom>
+      <image>un_squadron.jpg</image>
+      <year>1989</year>
     </game>
     <game>
       <title>Ultimate Mortal Kombat 3</title>
       <rom>ultimate_mortal_kombat_3.smc</rom>
+      <image>ultimate_mortal_kombat_3.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Uniracers</title>
       <rom>uniracers.smc</rom>
+      <image>uniracers.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>Wario&apos;s Woods</title>
       <rom>warios_woods.smc</rom>
+      <image>warios_woods.jpg</image>
+      <year>1994</year>
     </game>
     <game>
       <title>X-Men - Mutant Apocalypse</title>
       <rom>xmen_mutant_apocalypse.smc</rom>
+      <image>xmen_mutant_apocalypse.jpg</image>
+      <year>1995</year>
     </game>
     <game>
       <title>Yoshi&apos;s Cookie</title>
       <rom>yoshis_cookie.smc</rom>
+      <image>yoshis_cookie.png</image>
+      <year>1992</year>
     </game>
     <game>
       <title>Zombies Ate My Neighbors</title>
       <rom>zombies_ate_my_neighbors.smc</rom>
+      <image>zombies_ate_my_neighbors.jpg</image>
+      <year>1993</year>
     </game>
   </snes>
-
-
 </config>
-

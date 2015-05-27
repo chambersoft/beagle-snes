@@ -1,8 +1,8 @@
 
-<pause_combo>
+  <pause_combo>
     <pause_key>4</pause_key>
     <pause_key>5</pause_key>
     <pause_key>8</pause_key>
     <pause_key>9</pause_key>
-</pause_combo>
+  </pause_combo>
 

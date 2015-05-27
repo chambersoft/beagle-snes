@@ -1,5 +1,5 @@
 
-<player2>
+  <player2>
     <vaxis>1</vaxis>
     <haxis>0</haxis>
     <L>4</L>
@@ -10,4 +10,5 @@
     <Y>3</Y>
     <select>8</select>
     <start>9</start>
-</player2>
+  </player2>
+

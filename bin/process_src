@@ -28,9 +28,11 @@ GAMES_XML_SRC_PATH="$SRC_ROOT/games.xml"
 mkdir -p "$2"
 DIST_ROOT="$(cd "$2";pwd)"
 ROMS_DIST_ROOT="$DIST_ROOT/roms"
+IMAGES_DIST_ROOT="$DIST_ROOT/images"
 GAMES_XML_DIST_PATH="$DIST_ROOT/games.xml"
 rimraf "$GAMES_XML_DIST_PATH"
 rimraf "$ROMS_DIST_ROOT"
+rimraf "$IMAGES_DIST_ROOT"
 
 
 pushd "$ROMS_SRC_ROOT" >/dev/null
@@ -40,9 +42,9 @@ pushd "$ROMS_SRC_ROOT" >/dev/null
 		rom_src_root="$ROMS_SRC_ROOT/$rom_type"
 		rom_dist_root="$ROMS_DIST_ROOT/$rom_type"
 		mkdir -p "$rom_dist_root"
-		echo "<$rom_type>" >$build_path
+		echo "  <$rom_type>" >$build_path
 	    echo "$("$PROCESS_SCRIPT_PATH" "$rom_src_root" "$rom_dist_root")" >>$build_path
-	    echo "</$rom_type>" >>$build_path
+	    echo "  </$rom_type>" >>$build_path
 	done
 popd >/dev/null
 
