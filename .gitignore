@@ -1,6 +1,7 @@
 roms/
 !src/roms/
 .idea/
+.idea
 *.log
 node_modules/
 dist_test/
