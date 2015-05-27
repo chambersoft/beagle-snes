@@ -17,6 +17,7 @@ PROCESS_SCRIPT_PATH="$SCRIPT_ROOT/process_roms"
 # "/path/to/my/roms
 SRC_ROOT="$(cd "$1";pwd)"
 ROMS_SRC_ROOT="$SRC_ROOT/roms"
+XML_SRC_ROOT="$SRC_ROOT/xml"
 BUILD_SRC_ROOT="$SRC_ROOT/build"
 rimraf "$BUILD_SRC_ROOT"
 mkdir -p "$BUILD_SRC_ROOT"
@@ -45,15 +46,19 @@ pushd "$ROMS_SRC_ROOT" >/dev/null
 	done
 popd >/dev/null
 
-BUILD_ALL_PATH="$BUILD_SRC_ROOT/all_roms"
-pushd "$BUILD_SRC_ROOT" >/dev/null
-	for rom_config in * ; do
-		cat "$rom_config" >>"$BUILD_ALL_PATH"
+echo '\<?xml version="1.0"?\>' >$GAMES_XML_DIST_PATH
+echo '\<config\>'\ >>$GAMES_XML_DIST_PATH
+
+pushd "$XML_SRC_ROOT" >/dev/null
+	for xml_config in * ; do
+		cat "$xml_config" >>"$GAMES_XML_DIST_PATH"
 	done
 popd >/dev/null
 
-all_configs=$(cat "$BUILD_ALL_PATH")
-echo "BUILDING ALL_CONFIGS BELOW WITH $GAMES_XML_SRC_PATH TO $GAMES_XML_DIST_PATH"
-replace_string="<INJECT_GAMES />"
-echo $(cat "$GAMES_XML_SRC_PATH") | sed "s/{INJECT_GAMES}/"$all_configs"/g" >$GAMES_XML_DIST_PATH
+pushd "$BUILD_SRC_ROOT" >/dev/null
+	for rom_config in * ; do
+		cat "$rom_config" >>"$GAMES_XML_DIST_PATH"
+	done
+popd >/dev/null
 
+echo '\</config\>'\ >>$GAMES_XML_DIST_PATH

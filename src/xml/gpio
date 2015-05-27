@@ -1,0 +1,15 @@
+<gpio>
+    <gpio_gpleft>66</gpio_gpleft>
+    <gpio_gpright>67</gpio_gpright>
+    <gpio_gpup>69</gpio_gpup>
+    <gpio_gpdown>68</gpio_gpdown>
+    <gpio_L>45</gpio_L>
+    <gpio_R>44</gpio_R>
+    <gpio_A>23</gpio_A>
+    <gpio_B>26</gpio_B>
+    <gpio_X>47</gpio_X>
+    <gpio_Y>46</gpio_Y>
+    <gpio_select>27</gpio_select>
+    <gpio_start>65</gpio_start>
+    <gpio_pause>22</gpio_pause>
+</gpio>
