@@ -61,7 +61,7 @@ rom_dist_path="$dist_path/$rom_dist_file"
 
 cp "$rom_path" "$rom_dist_path"
 
-echo "    <game>"
-echo "      <title>$rom_dist_title</title>"
-echo "      <rom>$rom_dist_file</rom>"
-echo "    </game>"
+echo "  <game>"
+echo "    <title>$rom_dist_title</title>"
+echo "    <rom>$rom_dist_file</rom>"
+echo "  </game>"

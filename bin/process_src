@@ -40,25 +40,22 @@ pushd "$ROMS_SRC_ROOT" >/dev/null
 		rom_src_root="$ROMS_SRC_ROOT/$rom_type"
 		rom_dist_root="$ROMS_DIST_ROOT/$rom_type"
 		mkdir -p "$rom_dist_root"
-		echo "  <$rom_type>" >$build_path
+		echo "<$rom_type>" >$build_path
 	    echo "$("$PROCESS_SCRIPT_PATH" "$rom_src_root" "$rom_dist_root")" >>$build_path
-	    echo "  </$rom_type>" >>$build_path
+	    echo "</$rom_type>" >>$build_path
 	done
 popd >/dev/null
-
-echo '\<?xml version="1.0"?\>' >$GAMES_XML_DIST_PATH
-echo '\<config\>'\ >>$GAMES_XML_DIST_PATH
 
 pushd "$XML_SRC_ROOT" >/dev/null
-	for xml_config in * ; do
-		cat "$xml_config" >>"$GAMES_XML_DIST_PATH"
-	done
+	cat header >"$GAMES_XML_DIST_PATH"
+	cat player1 >>"$GAMES_XML_DIST_PATH"
+	cat player2 >>"$GAMES_XML_DIST_PATH"
+	cat pause_combo >>"$GAMES_XML_DIST_PATH"
+	cat gpio >>"$GAMES_XML_DIST_PATH"
+	pushd "$BUILD_SRC_ROOT" >/dev/null
+		for rom_config in * ; do
+			cat "$rom_config" >>"$GAMES_XML_DIST_PATH"
+		done
+	popd >/dev/null
+	cat footer >>"$GAMES_XML_DIST_PATH"
 popd >/dev/null
-
-pushd "$BUILD_SRC_ROOT" >/dev/null
-	for rom_config in * ; do
-		cat "$rom_config" >>"$GAMES_XML_DIST_PATH"
-	done
-popd >/dev/null
-
-echo '\</config\>'\ >>$GAMES_XML_DIST_PATH
