@@ -1,21 +1,14 @@
 #!/bin/bash
 
-if [ "$1" = "" ] ; then
-	echo "Must supply a source directory to process..."
-	exit 1
-fi
-
-if [ "$2" = "" ] ; then
-	echo "Must supply a destination directory to process..."
-	exit 1
-fi
+src_root=${1-"../src"}
+dist_root=${2-"../dist"}
 
 SCRIPT_ROOT="$(cd "$(dirname "$0")" ; pwd -P )"
 PROCESS_SCRIPT_PATH="$SCRIPT_ROOT/process_roms"
 
 # Rom directory to process
 # "/path/to/my/roms
-SRC_ROOT="$(cd "$1";pwd)"
+SRC_ROOT="$(cd "$src_root";pwd)"
 ROMS_SRC_ROOT="$SRC_ROOT/roms"
 XML_SRC_ROOT="$SRC_ROOT/xml"
 BUILD_SRC_ROOT="$SRC_ROOT/build"
@@ -25,8 +18,8 @@ GAMES_XML_SRC_PATH="$SRC_ROOT/games.xml"
 
 # Rom directory this will be placed in /roms/snes, etc.
 # "/path/to/dist/rom/dir"
-mkdir -p "$2"
-DIST_ROOT="$(cd "$2";pwd)"
+mkdir -p "$dist_root"
+DIST_ROOT="$(cd "$dist_root";pwd)"
 ROMS_DIST_ROOT="$DIST_ROOT/roms"
 IMAGES_DIST_ROOT="$DIST_ROOT/images"
 GAMES_XML_DIST_PATH="$DIST_ROOT/games.xml"

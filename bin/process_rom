@@ -36,8 +36,6 @@ rom_raw_title="${rom_raw_file%.*}"
 # "Some Great &ROM with Terrible punction'uation"
 cleaned_rom_title=$(echo $rom_raw_title | sed 's/ ([0-9A-Za-z\.]*)//g' | sed 's/ \[![A-Za-z]*\]//g' | sed 's/\.\./\./g' | sed 's/  / /g' | sed 's/^ *//;s/ *$//g')
 
-
-
 # replace all spaces with underscore, lowercase file names, and strip all punctuation, lowercase file extension
 # "some_great_rom_with_terrible_punctionuation"
 rom_dist_name=$(echo $cleaned_rom_title | tr -d '[:punct:]' | sed 's/^ *//;s/ *$//g' | sed 's/  / /g' | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
@@ -48,8 +46,7 @@ rom_dist_file="$rom_dist_name.$(echo $rom_raw_ext | tr '[:upper:]' '[:lower:]')"
 
 # strip out punctionation for api search
 # "Some Great ROM with Terrible punctionuation"
-search_string="$(echo $cleaned_rom_title | tr -d '[:punct:]')"
-
+search_string="$(echo "$cleaned_rom_title" | tr -s ' ' | tr -d '[:punct:]')"
 
 # where the cleaned up rom is going
 # "/path/to/dist/rom/dir/some_great_rom_with_terrible_punctionuation.nes"
@@ -61,21 +58,21 @@ echo "    <game>"
 
 # replace search with api key and query
 API_SEARCH="http://www.giantbomb.com/api/search?api_key=${API_KEY}&format=JSON&query=\"${search_string}\"&resources=game&limit=1"
-#>&2 echo $API_SEARCH
+
 response=$(curl -sL -H "Content-Type: application/json" -X GET "$API_SEARCH")
 if [[ $response == {* ]] ; then
-  game_name=$(echo $response | underscore select .name --outfmt text | sed -n 1p)
-  if [ "$game_name" == "" ] ; then
+  game_name=$(echo -e "$response" | underscore select .name --outfmt text | sed -n 1p)
+  if [ "$game_name" != "" ] ; then
     cleaned_rom_title="$game_name"
   fi
 
   # replaced all invalid xml [&,",',<,>] chars with their escaped versions
-  rom_dist_title=$(echo $cleaned_rom_title | sed 's/&/\&amp;/g' | sed 's/"/\&quot;/g' | sed 's/'\''/\&apos;/g' | sed 's/</\&lt;/g' | sed 's/>/\&gt;/g')
+  rom_dist_title=$(echo -e "$cleaned_rom_title" | sed 's/&/\&amp;/g' | sed 's/"/\&quot;/g' | sed 's/'\''/\&apos;/g' | sed 's/</\&lt;/g' | sed 's/>/\&gt;/g')
 
   echo "      <title>$rom_dist_title</title>"
   echo "      <rom>$rom_dist_file</rom>"
 
-  image_url=$(echo $response | underscore select .screen_url --outfmt text)
+  image_url=$(echo -e "$response" | underscore select .super_url --outfmt text)
   image_raw_file=$(basename "$image_url")
   image_raw_ext="${image_raw_file##*.}"
   image_dist_file="$rom_dist_name.$image_raw_ext"
@@ -84,11 +81,15 @@ if [[ $response == {* ]] ; then
     curl -s "$image_url" >"$image_dist_path"
     echo "      <image>$image_dist_file</image>"
 
-    year=$(echo $response | underscore select .original_release_date --outfmt text |  cut -c1-4)
+    year=$(echo -e "$response" | underscore select .original_release_date --outfmt text |  cut -c1-4)
     if [ "$year" != "null" ] ; then
       echo "      <year>$year</year>"
     fi
 
+    deck=$(echo -e "$response" | underscore select .deck --outfmt text)
+    if [ "$deck" != "null" ] ; then
+      echo "      <text>$deck</text>"
+    fi
   fi
 else
   # replaced all invalid xml [&,",',<,>] chars with their escaped versions
